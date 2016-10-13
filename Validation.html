@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Test</title>
+<script type="text/javascript" src="validation.js"></script>
+<style type="text/css">
+.err
+{
+	color:red;
+	font-family:vedana;
+}
+</style>
+</head>
+<body>
+<h1 align="center">Form Validation</h1>
+<form onsubmit="return validateForm(this)">
+<table width="100%"  >
+<tr>
+<td align="center">
+<table width="75%" cellpadding="10" border="1">
+<tr>
+<td align="right" width="20%"><span class="err">*</span><label>Name :</label></td>
+<td width="40%">
+<input type="text" name="name" id="txtName" data-required="true" data-pattern="^[A-Z]+$" data-maxlength="10" data-errmaxlength="Name should not exceed 10 characters" data-errrequired="Name is must" data-errpattern="Only Alphabets allowed"/>
+</td>
+<td width="40%"><span class="err"></span></td>
+</tr>
+
+<tr>
+<td align="right"><span class="err">*</span><label>Email :</label></td>
+<td><input type="text" name="email" id="txtEmail" data-required="true" data-errrequired="Email Id Required" data-pattern="^\w+(\.\w+)?@\w+(\.\w{2,3})+$" data-errpattern="Invalid EmailId" /></td>
+<td><span class="err"></span></td>
+</tr>
+
+<tr>
+<td align="right"><span>*</span><label>Gender :</label></td>
+<td>
+<input type="radio" id="rdoMale" name="gender" class="gender" value="Male"/>Male
+<input type="radio" id="rdoFemale" name="gender" class="gender" value="Female"/>Female
+</td>
+<td><span></span></td>
+</tr>
+
+<tr>
+<td align="right"><span>*</span><label>Hobbies :</label></td>
+<td>
+<input type="checkbox" id="chkCricket" class="hobbies" name="hobby" value="Cricket"/>Cricket
+<input type="checkbox" id="chkTennis" class="hobbies" name="hobby" value="Tennis"/>Tennis
+<input type="checkbox" id="chkFootball" class="hobbies" name="hobby" value="Football"/>Football
+</td>
+<td><span></span></td>
+</tr>
+
+
+<tr>
+<td align="right"><span>*</span><label>City :</label></td>
+<td>
+<select id="ddlCities" name="cities">
+<option value="-1">Select a City</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Chennai">Chennai</option>
+<option value="Mumbai">Mumbai</option>
+</select>
+</td>
+<td><span></span></td>
+</tr>
+<tr>
+<td colspan="3" align="center">
+<input type="submit" id="btnSubmit" value="Submit"/>
+<input type="reset" id="btnReset" value="Reset"/>
+<input type="button" id="btnPreview" value="Preview" onclick="preview(this.form)"/>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
